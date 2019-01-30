@@ -13,6 +13,7 @@ func TestNodeShouldBeDeleted(t *testing.T) {
 		{"cluster-abcdefghijkl-minion-5",[]string{"1", "2", "3"}, false},
 		{"cluster-abcdefghijkl-minion-6",[]string{}, false},
 		{"",[]string{"1", "2", "3"}, false},
+		{"",[]string{}, false},
 	}
 
 	for _, test := range tests {
