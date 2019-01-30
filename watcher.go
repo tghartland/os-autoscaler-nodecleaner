@@ -21,8 +21,6 @@ type Watcher struct {
 
 	stackID string
 	stackName string
-
-	deletingNodes []string
 }
 
 func CreateWatcher() (*Watcher, error) {
