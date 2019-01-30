@@ -33,4 +33,4 @@ spec:
       volumes:
         - name: kube-openstack-config
           secret:
-            secretName: autoscaler-os-secrets
+            secretName: autoscaler-os-creds
