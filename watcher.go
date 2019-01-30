@@ -1,16 +1,16 @@
 package main
 
 import (
+	"github.com/golang/glog"
+	"github.com/gophercloud/gophercloud"
+	"github.com/gophercloud/gophercloud/openstack"
+	"github.com/gophercloud/gophercloud/openstack/orchestration/v1/stackresources"
 	"github.com/pkg/errors"
 	"gopkg.in/gcfg.v1"
-	"github.com/gophercloud/gophercloud/openstack"
-	"github.com/gophercloud/gophercloud"
-	provider_os "k8s.io/kubernetes/pkg/cloudprovider/providers/openstack"
-	"github.com/gophercloud/gophercloud/openstack/orchestration/v1/stackresources"
-	"k8s.io/client-go/kubernetes"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"github.com/golang/glog"
 	"k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/client-go/kubernetes"
+	provider_os "k8s.io/kubernetes/pkg/cloudprovider/providers/openstack"
 )
 
 type Watcher struct {
@@ -19,7 +19,7 @@ type Watcher struct {
 
 	kubeClient *kubernetes.Clientset
 
-	stackID string
+	stackID   string
 	stackName string
 }
 
@@ -58,8 +58,8 @@ func CreateWatcher() (*Watcher, error) {
 
 	watcher := &Watcher{
 		clusterClient: clusterClient,
-		heatClient: heatClient,
-		kubeClient: kubeClient,
+		heatClient:    heatClient,
+		kubeClient:    kubeClient,
 	}
 
 	watcher.stackID, err = GetStackID(clusterClient, *clusterName)

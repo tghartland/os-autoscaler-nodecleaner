@@ -15,8 +15,6 @@ var (
 	watchInterval = flag.Duration("watch-interval", time.Second*10, "Interval between checking node statuses")
 )
 
-
-
 func main() {
 	flag.Parse()
 	glog.Infof("os-autoscaler-nodecleaner built from commit %s", gitCommit)

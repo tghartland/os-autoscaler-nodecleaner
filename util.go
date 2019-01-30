@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/gophercloud/gophercloud/openstack/identity/v3/extensions/trusts"
 	"github.com/gophercloud/gophercloud"
-	provider_os "k8s.io/kubernetes/pkg/cloudprovider/providers/openstack"
 	"github.com/gophercloud/gophercloud/openstack/containerinfra/v1/clusters"
-	"github.com/pkg/errors"
+	"github.com/gophercloud/gophercloud/openstack/identity/v3/extensions/trusts"
 	"github.com/gophercloud/gophercloud/openstack/orchestration/v1/stacks"
-	"k8s.io/client-go/rest"
+	"github.com/pkg/errors"
 	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
+	provider_os "k8s.io/kubernetes/pkg/cloudprovider/providers/openstack"
 	"strings"
 )
 
