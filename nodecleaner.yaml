@@ -1,0 +1,36 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: os-autoscaler-nodecleaner
+  namespace: kube-system
+  labels:
+    app: autoscaler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: autoscaler-nodecleaner
+  template:
+    metadata:
+      namespace: kube-system
+      labels:
+        app: autoscaler-nodecleaner
+    spec:
+      serviceAccountName: os-autoscaler-account
+      containers:
+        - name: os-autoscaler-nodecleaner
+          image: thartland/os-autoscaler-nodecleaner:latest
+          imagePullPolicy: Always
+          command:
+            - /app/main
+            - --logtostderr
+            - --cluster-name=scaler-01
+            - --cloud-config=/config/kube_openstack_config
+          volumeMounts:
+            - name: kube-openstack-config
+              mountPath: /config
+              readOnly: true
+      volumes:
+        - name: kube-openstack-config
+          secret:
+            secretName: autoscaler-os-secrets
