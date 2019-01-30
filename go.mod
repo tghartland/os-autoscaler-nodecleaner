@@ -2,6 +2,8 @@ module github.com/tghartland/os-autoscaler-nodecleaner
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/docker/distribution v2.7.1+incompatible // indirect
+	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/gogo/protobuf v1.2.0 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/groupcache v0.0.0-20181024230925-c65c006176ff // indirect
@@ -15,10 +17,16 @@ require (
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/onsi/ginkgo v1.7.0 // indirect
+	github.com/onsi/gomega v1.4.3 // indirect
+	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
+	github.com/pborman/uuid v1.2.0 // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/pkg/errors v0.8.1
 	github.com/prometheus/client_golang v0.9.2 // indirect
+	github.com/spf13/afero v1.2.1 // indirect
 	github.com/spf13/pflag v1.0.3 // indirect
+	github.com/stretchr/testify v1.3.0 // indirect
 	golang.org/x/crypto v0.0.0-20190128193316-c7b33c32a30b // indirect
 	golang.org/x/oauth2 v0.0.0-20190115181402-5dab4167f31c // indirect
 	golang.org/x/sys v0.0.0-20190129075346-302c3dd5f1cc // indirect
@@ -28,7 +36,7 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
 	// k8s.io/api v0.0.0-20190126160303-ccdd560a045f // indirect
-	k8s.io/api v0.0.0-20190111032252-67edc246be36 // indirect
+	k8s.io/api v0.0.0-20190111032252-67edc246be36
 	k8s.io/apiextensions-apiserver v0.0.0-20181121021301-a669f7edd28c // indirect
 	k8s.io/apimachinery v0.0.0-20190126155707-0e6dcdd1b5ce
 	k8s.io/apiserver v0.0.0-20181019023417-9fd62b6f47da // indirect
