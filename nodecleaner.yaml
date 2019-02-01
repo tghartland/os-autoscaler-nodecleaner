@@ -16,7 +16,7 @@ spec:
       labels:
         app: autoscaler-nodecleaner
     spec:
-      serviceAccountName: os-autoscaler-account
+      serviceAccountName: os-autoscaler-nodecleaner-account
       containers:
         - name: os-autoscaler-nodecleaner
           image: thartland/os-autoscaler-nodecleaner:latest

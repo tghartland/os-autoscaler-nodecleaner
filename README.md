@@ -11,8 +11,7 @@ $ kubectl -n kube-system create secret generic autoscaler-os-creds --from-file=k
 ```
 
 The above steps should have already been done for the autoscaler setup.
-The ServiceAccount created for the autoscaler is also reused here.
 
 ```
-$ kubectl create -f nodecleaner.yaml
+$ kubectl create -f svcaccount.yaml -f nodecleaner.yaml
 ```
