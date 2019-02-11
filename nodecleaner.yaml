@@ -25,12 +25,12 @@ spec:
             - /app/main
             - --logtostderr
             - --cluster-name=scaler-01
-            - --cloud-config=/config/kube_openstack_config
+            - --cloud-config=/config/cloud-config
           volumeMounts:
-            - name: kube-openstack-config
+            - name: cloud-config
               mountPath: /config
               readOnly: true
       volumes:
-        - name: kube-openstack-config
+        - name: cloud-config
           secret:
-            secretName: autoscaler-os-creds
+            secretName: autoscaler-os-cloud-config
